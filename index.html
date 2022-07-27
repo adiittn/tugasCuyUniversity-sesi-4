@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css" />
+</head>
+
+<body class="font-sans">
+
+    <!-- NAV BAR START -->
+    <div class="flex flex-row h-20 bg-white items-center justify-center w-full fixed shadow-xl z-50">
+        <ul class="flex gap-8 text-black font-bold">
+            <li class="hover:underline"><a href="#home">HOME</a></li>
+            <li class="hover:underline"><a href="#ruang-keluarga">RUANG KELUARGA</a></li>
+            <li class="hover:underline"><a href="#ruang-makan">RUANG MAKAN</a></li>
+            <li class="hover:underline"><a href="#ruang-tidur">RUANG TIDUR</a></li>
+            <li class="hover:underline"><a href="#ruang-tamu">RUANG TAMU</a></li>
+        </ul>
+    </div>
+    <!-- NAV BAR END -->
+
+    <!-- HOME START -->
+    <div id="home" class="flex flex-col justify-center items-center min-h-screen bg-black">
+        <div class="text-6xl text-white font-bold">
+            <h1><a href="https://cuyuniverse.co/" target="_blank">"TUGAS CUY UNIVERSITY"</a></h1>
+        </div>
+        <div class="text-xl text-white font-medium leading-3">
+            <p>SESI - 4.</p>
+        </div>
+    </div>
+    <!-- HOME END -->
+
+    <!-- RUANG KELUARGA START -->
+    <div id="ruang-keluarga" class="flex flex-col items-center justify-center min-h-screen w-full gap-8 bg-gray-100">
+        <div class="font-bold text-6xl mb-36">
+            <h1>
+                "RUANG KELUARGA"
+            </h1>
+        </div>
+
+        <!-- SAKLAR MASTER RUANG KELUARGA START -->
+        <div class="flex flex-col items-center gap-4">
+            <div class="font-bold">
+                <p>SAKLAR UTAMA RUANG KELUARGA</p>
+            </div>
+            <label for="cetrekan" class="inline-flex relative items-center cursor-pointer">
+                <input type="checkbox" value="" id="cetrekan" class="sr-only peer" onclick="saklarMasterKeluarga();">
+                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+            </label>
+        </div>
+        <!-- SAKLAR MASTER RUANG KELUARGA END -->
+
+        <!-- LAMPU RUANG KELUARGA START -->
+        <div class="flex flex-row gap-20">
+            <div class="flex flex-col items-center gap-3">
+                <img id="lampu1" src="assets/images/off.gif" alt="">
+                <label for="cetrekan1" class="inline-flex relative items-center cursor-pointer">
+                    <input type="checkbox" value="" id="cetrekan1" class="sr-only peer" onclick="saklarKeluarga();">
+                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                </label>
+            </div>
+            <div class="flex flex-col items-center gap-3">
+                <img id="lampu2" src="assets/images/off.gif" alt="">
+                <label for="cetrekan2" class="inline-flex relative items-center cursor-pointer">
+                    <input type="checkbox" value="" id="cetrekan2" class="sr-only peer" onclick="saklarKeluarga();">
+                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                </label>
+            </div>
+            <div class="flex flex-col items-center gap-3">
+                <img id="lampu3" src="assets/images/off.gif" alt="">
+                <label for="cetrekan3" class="inline-flex relative items-center cursor-pointer">
+                    <input type="checkbox" value="" id="cetrekan3" class="sr-only peer" onclick="saklarKeluarga();">
+                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                </label>
+            </div>
+        </div>
+        <!-- LAMPU RUANG KELUARGA END -->
+    </div>
+    <!-- RUANG KELUARGA END -->
+
+    <!-- RUANG MAKAN START -->
+    <div id="ruang-makan" class="flex flex-col items-center justify-center min-h-screen w-full gap-8 bg-black text-white">
+        <div class="font-bold text-6xl mb-36">
+            <h1>
+                "RUANG MAKAN"
+            </h1>
+        </div>
+        <div class="flex flex-col items-center gap-4">
+            <div class="font-bold">
+                <p>AKU JOMBLO NIH KANG</p>
+            </div>
+        </div>
+
+        <!-- LAMPU RUANG MAKAN START -->
+        <div class="flex flex-row gap-20">
+            <div class="flex flex-col items-center gap-3">
+                <img id="lampu4" src="assets/images/off.gif" alt="">
+                <label for="cetrekanMasterMakan" class="inline-flex relative items-center cursor-pointer">
+                    <input type="checkbox" value="" id="cetrekanMasterMakan" class="sr-only peer" onclick="saklarMasterMakan();">
+                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                </label>
+            </div>
+        </div>
+        <!-- LAMPU RUANG MAKAN START -->
+
+    </div>
+    <!-- RUANG MAKAN END -->
+
+    <!-- RUANG TIDUR START -->
+    <div id="ruang-tidur" class="flex flex-col items-center justify-center min-h-screen w-full gap-8 bg-gray-100 text-black">
+        <div class="font-bold text-6xl mb-36">
+            <h1>
+                "RUANG TIDUR"
+            </h1>
+        </div>
+
+        <!-- SAKLAR MASTER RUANG TIDUR START -->
+        <div class="flex flex-col items-center gap-4">
+            <div class="font-bold">
+                <p>SAKLAR UTAMA RUANG TIDUR</p>
+            </div>
+            <label for="cetrekanMasterTidur" class="inline-flex relative items-center cursor-pointer">
+                <input type="checkbox" value="" id="cetrekanMasterTidur" class="sr-only peer" onclick="saklarMasterTidur();">
+                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+            </label>
+        </div>
+        <!-- SAKLAR MASTER RUANG TIDUR END -->
+
+        <!-- LAMPU RUANG TIDUR START -->
+        <div class="flex flex-row gap-20">
+            <div class="flex flex-col items-center gap-3">
+                <img id="lampu5" src="assets/images/off.gif" alt="">
+                <label for="cetrekan5" class="inline-flex relative items-center cursor-pointer">
+                    <input type="checkbox" value="" id="cetrekan5" class="sr-only peer" onclick="saklarTidur();">
+                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                </label>
+            </div>
+            <div class="flex flex-col items-center gap-3">
+                <img id="lampu6" src="assets/images/off.gif" alt="">
+                <label for="cetrekan6" class="inline-flex relative items-center cursor-pointer">
+                    <input type="checkbox" value="" id="cetrekan6" class="sr-only peer" onclick="saklarTidur();">
+                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                </label>
+            </div>
+        </div>
+        <!-- LAMPU RUANG TIDUR END -->
+
+    </div>
+    <!-- RUANG TIDUR END -->
+
+    <!-- RUANG TAMU START -->
+    <div id="ruang-tamu" class="flex flex-col items-center justify-center min-h-screen w-full gap-8 bg-black text-white">
+        <div class="font-bold text-6xl mb-36">
+            <h1>
+                "RUANG TAMU"
+            </h1>
+        </div>
+
+        <!-- SAKLAR MASTER RUANG TAMU START -->
+        <div class="flex flex-col items-center gap-4">
+            <div class="font-bold">
+                <p>SAKLAR UTAMA RUANG TAMU</p>
+            </div>
+            <label for="cetrekanMasterTamu" class="inline-flex relative items-center cursor-pointer">
+                <input type="checkbox" value="" id="cetrekanMasterTamu" class="sr-only peer" onclick="saklarMasterTamu();">
+                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+            </label>
+        </div>
+        <!-- SAKLAR MASTER RUANG TAMU END -->
+
+        <!-- LAMPU RUANG TAMU START -->
+        <div class="flex flex-row gap-20">
+            <div class="flex flex-col items-center gap-3">
+                <img id="lampu7" src="assets/images/off.gif" alt="">
+                <label for="cetrekan7" class="inline-flex relative items-center cursor-pointer">
+                    <input type="checkbox" value="" id="cetrekan7" class="sr-only peer" onclick="saklarTamu();">
+                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                </label>
+            </div>
+            <div class="flex flex-col items-center gap-3">
+                <img id="lampu8" src="assets/images/off.gif" alt="">
+                <label for="cetrekan8" class="inline-flex relative items-center cursor-pointer">
+                    <input type="checkbox" value="" id="cetrekan8" class="sr-only peer" onclick="saklarTamu();">
+                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                </label>
+            </div>
+            <div class="flex flex-col items-center gap-3">
+                <img id="lampu9" src="assets/images/off.gif" alt="">
+                <label for="cetrekan9" class="inline-flex relative items-center cursor-pointer">
+                    <input type="checkbox" value="" id="cetrekan9" class="sr-only peer" onclick="saklarTamu();">
+                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                </label>
+            </div>
+            <div class="flex flex-col items-center gap-3">
+                <img id="lampu10" src="assets/images/off.gif" alt="">
+                <label for="cetrekan10" class="inline-flex relative items-center cursor-pointer">
+                    <input type="checkbox" value="" id="cetrekan10" class="sr-only peer" onclick="saklarTamu();">
+                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                </label>
+            </div>
+        </div>
+        <!-- LAMPU RUANG TAMU END -->
+
+    </div>
+    <!-- RUANG TAMU END -->
+
+    <div class="flex flex-col items-center justify-center font-bold mt-4 mb-2">
+        <div>adiittn</div>
+        <div>
+            &#169; 2022
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
+    <script src="main.js" type="application/javascript"></script>
+</body>
+
+</html>
